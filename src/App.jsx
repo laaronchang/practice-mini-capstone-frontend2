@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+function Header() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>test + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+    
+    </div>
   )
 }
 
-export default App
+function ProductsNew() {
+  return (
+    <div>
+      <h1>Products</h1>
+      <p>Product Name: <input type="text"></input></p>
+      <p>Description: <input type="text"></input></p>
+      <p>Price: <input type="text"></input></p>
+      <p>Image URL: <input type="text"></input></p>
+      <button>Submit</button>
+    </div>
+  )
+}
+
+function ProductsIndex() {
+  return (
+    <div>
+      <h1>All Products</h1>
+      <h2>Black Diamond</h2>
+      <p>The best diamond.</p>
+      <p>$15</p>
+      <img src="https://t3.ftcdn.net/jpg/06/06/82/60/360_F_606826072_HUOxeO0FMVrvUp3Iyk0pEd97mfLUUUgM.jpg"></img>
+      <br />
+      
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+    <div>
+      Copyright 2023
+    </div>
+  )
+}
+
+function Content() {
+  return (
+    <main>
+      <ProductsNew />
+      <ProductsIndex />
+    </main>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
